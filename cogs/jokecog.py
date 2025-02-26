@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 from discord import app_commands
 class JokeCog(commands.Cog):
-    def __init__(self, bot):
+    def __init__(self, bot:commands.bot):
         self.bot = bot
 
     @app_commands.command(description = "Gives you a joke.")

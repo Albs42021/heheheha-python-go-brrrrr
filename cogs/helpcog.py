@@ -26,6 +26,8 @@ class HelpCog(commands.Cog):
 
         embed.add_field(name = "/kick:", value = "Kicks someone from this discord server.", inline = False)
 
+        embed.add_field(name = "/meme:", value = "Gives you a meme.", inline = False)
+
         embed.add_field(name = "/mute:", value = "Mutes someone on this discord server.", inline = False)
 
         embed.add_field(name = "/ping:", value = "Gives you the bot's ping.", inline = False)
