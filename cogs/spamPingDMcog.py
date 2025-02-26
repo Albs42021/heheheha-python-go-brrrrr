@@ -38,7 +38,7 @@ class SpamPingDMCog(commands.Cog):
         
         while countAt < count:
             countAt += 1
-            await recipient.send(recipient.mention + message)
+            await recipient.send(recipient.mention + " " + message)
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(SpamPingDMCog(bot))
