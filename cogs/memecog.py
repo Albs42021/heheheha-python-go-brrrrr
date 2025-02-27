@@ -29,7 +29,7 @@ class MemeCog(commands.Cog):
 
         embed.add_field(name = "Author:", value = author, inline = False)
 
-        embed.add_field(name = "Link:", value = link, inline = False)
+        embed.add_field(name = "Link To Post:", value = link, inline = False)
 
         await interaction.response.send_message(embed = embed)
 
