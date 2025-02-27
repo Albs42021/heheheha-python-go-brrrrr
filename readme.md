@@ -1,0 +1,1 @@
+This is a discord bot for moderation, fun activities, and devious shenanigans. To use it, create a .env file in the directory of this bot and put in "TOKEN = YOUR TOKEN GOES HERE", replacing YOUR TOKEN GOES HERE with your bot's token.
