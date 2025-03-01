@@ -6,7 +6,7 @@ class RoastDMCog(commands.Cog):
         self.bot = bot
 
     @app_commands.command(description = "Gives you a roast.")
-    async def roast_dm(self, interaction: discord.Interaction, recipiant: discord.Member):
+    async def roast_dm(self, interaction: discord.Interaction, recipient: discord.Member):
         sender = interaction.user
 
         url = await self.bot.session.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
@@ -19,17 +19,17 @@ class RoastDMCog(commands.Cog):
 
         dmEmbed.add_field(name = "Sent By:", value = sender.mention, inline = False)
 
-        dmEmbed.add_field(name = "Recipiant", value = recipiant.mention, inline = False)
+        dmEmbed.add_field(name = "Recipient", value = recipient.mention, inline = False)
 
         dmEmbed.add_field(name = "Roast:", value = roast, inline = False)
 
-        await recipiant.send(embed = dmEmbed)
+        await recipient.send(embed = dmEmbed)
 
         serverEmbed = discord.Embed(title = "Roast DM:", timestamp = discord.utils.utcnow(), color = 0x00FF00)
 
         serverEmbed.add_field(name = "Sent By:", value = sender.mention, inline = False)
 
-        serverEmbed.add_field(name = "Recipiant", value = recipiant.mention, inline = False)
+        serverEmbed.add_field(name = "Recipient", value = recipient.mention, inline = False)
 
         await interaction.response.send_message(embed = serverEmbed)
 
