@@ -16,7 +16,7 @@ class HelpCog(commands.Cog):
 
         embed.add_field(name = "/define:", value = "Defines a word.", inline = False)
 
-        embed.add_field(name = "/dm:", value = "DM's someone on this server.", inline = False)
+        embed.add_field(name = "/dm:", value = "DMs one or more people on this server.", inline = False)
 
         embed.add_field(name = "/generate_invite:", value = "Generates an invite link to this discord server.", inline = False)
 
