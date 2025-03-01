@@ -175,7 +175,7 @@ class CalculatorCog(commands.Cog):
     
             embed8.add_field(name = "Answer:", value = "Log " + str(logbase.content) + ", " + str(number.content) + " = " + str(math.log(float(int(number.content)), float(int(logbase.content)))), inline = False)
 
-            await interaction.response.send_message(embed = embed8)
+            await number.reply(embed = embed8)
 
         elif operation == "+" or operation == "add" or operation == "Add" or operation == "Addition" or operation == "addition" or operation == "plus" or operation == "Plus":
             embed9 = discord.Embed(title = f"Calculator:", timestamp = discord.utils.utcnow(), color = 0x0000FF)
@@ -218,7 +218,7 @@ class CalculatorCog(commands.Cog):
 
             embed11.add_field(name = "Answer:", value = str(first_addend.content) + " + " + str(second_addend.content) + " = " + str(sum), inline = False)
 
-            await interaction.response.send_message(embed = embed11)
+            await second_addend.reply(embed = embed11)
 
         elif operation == "-" or operation == "–" or operation == "minus" or operation == "Minus" or operation == "Subtraction" or operation == "subtraction" or operation == "subtract" or operation == "Subtract":
             embed12 = discord.Embed(title = f"Calculator:", timestamp = discord.utils.utcnow(), color = 0x0000FF)
@@ -261,7 +261,7 @@ class CalculatorCog(commands.Cog):
     
             embed14.add_field(name = "Answer:", value = str(minuend.content) + " - " + str(subtrahend.content) + " = " + str(difference), inline = False)
 
-            await interaction.response.send_message(embed = embed14)
+            await subtrahend.reply(embed = embed14)
 
         elif operation == "x" or operation == "X" or operation == "*" or operation == "times" or operation == "Times" or operation == "multiply" or operation == "Multiply" or operation == "multiplication" or operation == "Multiplication" or operation == "×":   
             embed15 = discord.Embed(title = f"Calculator:", timestamp = discord.utils.utcnow(), color = 0x0000FF)
@@ -304,9 +304,9 @@ class CalculatorCog(commands.Cog):
     
             embed17.add_field(name = "Answer:", value = str(first_factor.content) + " × " + str(second_factor.content) + " = " + str(product), inline = False)
 
-            await interaction.response.send_message(embed = embed17)
+            await second_factor.reply(embed = embed17)
 
-        elif operation == "/" or operation == "÷" or operation == "divide" or operation == "Divide" or operation == "division" or operation == "Division":
+        elif operation == "/" or operation == "divide" or operation == "Divide" or operation == "division" or operation == "Division":
             embed18 = discord.Embed(title = f"Calculator:", timestamp = discord.utils.utcnow(), color = 0x0000FF)
 
             embed18.add_field(name = "Requested by:", value = interaction.user.mention, inline = False)  
@@ -347,7 +347,7 @@ class CalculatorCog(commands.Cog):
 
             embed20.add_field(name = "Answer:", value = str(dividend.content) + " ÷ " + str(divisor.content) + " = " + str(quotient), inline = False)
 
-            await interaction.response.send_message(embed = embed20)
+            await divisor.reply(embed = embed20)
 
         elif operation == "^" or operation == "exponent" or operation == "Exponent" or operation == "exponents" or operation == "Exponents" or operation == "power" or operation == "Power" or operation == "powers" or operation == "Powers":
             embed21 = discord.Embed(title = f"Calculator:", timestamp = discord.utils.utcnow(), color = 0x0000FF)
@@ -390,7 +390,7 @@ class CalculatorCog(commands.Cog):
 
             embed23.add_field(name = "Answer:", value = str(base.content) + " ^ " + str(exponent.content) + " = " + str(power), inline = False)
 
-            await interaction.response.send_message(embed = embed23)
+            await exponent.reply(embed = embed23)
 
         else:
             await interaction.response.send_message("Invalid operation.")
