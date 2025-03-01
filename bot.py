@@ -92,6 +92,7 @@ async def startup():
     await bot.load_extension("cogs.helpcog")
     await bot.load_extension("cogs.triviacog")
     await bot.load_extension("cogs.memecog")
+    await bot.load_extension("cogs.roastcog")
 
     async with aiohttp.ClientSession() as session:
         bot.session = session

@@ -32,6 +32,8 @@ class HelpCog(commands.Cog):
 
         embed.add_field(name = "/ping:", value = "Gives you the bot's ping.", inline = False)
 
+        embed.add_field(name = "/roast:", value = "Gives you a roast.", inline = False)
+
         embed.add_field(name = "/say:", value = "Makes the bot say something.", inline = False)
 
         embed.add_field(name = "/snipe_delete:", value = "Gives you the last deleted message.", inline = False)
